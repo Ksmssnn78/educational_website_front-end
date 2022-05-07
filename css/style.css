@@ -143,10 +143,73 @@
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 6rem;
-    margin-top: -5rem;
+    margin-top: -6rem;
 }
-.course_images{
-    
-}
+
 /* course page end*/
+
+/* our program */
+#op_title{
+    font-size: xxx-large;
+    text-align: center;
+    margin: 1rem;
+}
+#op_title_des{
+    margin: 6rem;
+    padding: 2rem;
+    text-align: center;
+}
+.op_img-des{
+    display: flex;
+    flex-direction: row;
+    margin: 5rem;
+    padding: 1rem;
+
+}
+.op_img-des p{
+    text-align: justify;
+    padding: 1rem;
+}
+.op_img-des h4{
+    padding: 1rem;
+    font-size: x-large;
+}
+.op_img_third{
+    margin-bottom: 10rem;
+}
+
+/* our program end */
+
+/* why choose us*/
+#WCU{
+    background-color: #7971EA;
+    padding: 5rem;
+    border-radius: 30px;
+}
+#wcu_title{
+    margin: 5rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+    color: #fff;
+}
+.wcu_elements{
+    display: flex;
+    flex-direction: row;
+}
+.wcu_elements div{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 3rem;
+    height: 30rem;
+}
+.wcu_elements div h4{
+    font-size: xx-large;
+}
+.wcu_elements div p{
+    padding: 1rem;
+}
+/* why choose us end*/
+
 
