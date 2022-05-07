@@ -145,7 +145,34 @@
     margin: 6rem;
     margin-top: -6rem;
 }
-
+.course_images{
+    margin: 0px 3rem;
+    border: 2px solid #7971EA;
+    border-radius: 1rem;
+}
+.course_images > img{
+    width:100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.course_images > h4{
+    margin: .5rem 0px;
+}
+.course_images > p{
+    margin: .5rem 0px;
+}
+.course_des{
+    text-align: justify;
+    height: 10rem;
+    overflow: hidden;
+}
+.course_images p:last-child{
+    border-top: 2px solid #7971EA;
+    text-align: center;
+}
+.course_images p,h4{
+    padding: 0px 0.5rem;
+}
 /* course page end*/
 
 /* our program */
@@ -180,6 +207,50 @@
 
 /* our program end */
 
+/* our teacher */
+#ot_title{
+    text-align: center;
+    margin: 3rem;
+    font-size: xxx-large;
+}
+.ot_title_des{
+    margin: 5rem;
+    text-align: center;
+}
+.ot_all{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 5rem;
+    pad: 1rem;
+
+}
+.ot_common{
+    width: auto;
+    border: 2px solid rgba(139, 138, 138, 0.5);
+    border-radius: 10px;
+    margin: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+.ot_common img{
+    margin:auto;
+    margin-top: -5rem;
+    margin-bottom: 1.5rem;
+}
+.ot_name{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.ot_subject{
+    margin: .4rem;
+}
+.ot_common p:last-child{
+    text-align: justify;
+    height: 12rem;
+    overflow: hidden;
+}
+/* our teacher end */
+
 /* why choose us*/
 #WCU{
     background-color: #7971EA;
@@ -212,4 +283,55 @@
 }
 /* why choose us end*/
 
+/* massage us*/
+#massage_us{
+    margin: 5rem;
+    margin-top:10rem;
+}
+#msg_title{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+.msg_title_des{
+    text-align: center;
+    padding: 1rem;
+    width: 40rem;
+    margin: auto;
+}
+.msg_all form{
+    width: 40rem;
+    margin: auto;
+}
+.msg_all form input{
+    height: 2rem;
+    margin: .3rem 0px;
+    border: 2px solid #7971EA;
+    border-radius: 10px;
+    color: #3A3A3A;
+}
+.msg_all form textarea{
+    border: 2px solid #7971EA;
+    border-radius: 10px;
+    color: #3A3A3A;
+}
+.msg_all form button{
+    background-color: #7971EA;
+    border-radius: 30px;
+}
+/*massage us end*/
+
+/* footer */
+
+.foot_div{
+    background-color: #3A3A3A;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+.foot_div p{
+    text-align: center;
+    margin: auto;
+    color:#7971EA;
+}
+/* footer end*/
 
