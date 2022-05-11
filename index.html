@@ -16,20 +16,25 @@
         <div class="logo">
             <a href="#"><p id="logo_name">Sky Academy</p></a>
         </div>
-        <nav class="navigation navLink">
-            <a href="#">Home</a>
-            <a href="#">Course</a>
-            <a href="#">Program</a>
-            <a href="#">Teacher</a>
-        </nav>
-        <div class="contact">
-            <button><a href="#">contact Us</a></button>
+        <div class="menu" id="menu_js">
+            <img id="menu_cancel" src="./images/cancel.png" onclick="hideMenu()">
+            <nav class="navigation navLink">
+                <a href="#">Home</a>
+                <a href="#">Course</a>
+                <a href="#">Program</a>
+                <a href="#">Teacher</a>
+            </nav>
+            <div class="contact">
+                <button><a href="#">contact Us</a></button>
+            </div>
+            
         </div>
+        <img id="menu_expnd" src="./images/menu.png" onclick="showMenu()">
     </header>
     <section id="home">
         <div class="intro home_com">
             <h4>Learn From The Expert</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos quia tenetur impedit pariatur similique fugit hic nam dolores libero reiciendis, distinctio cupiditate ipsam voluptate velit, eveniet porro facilis veniam molestias eligendi non? Labore tenetur nulla distinctio hic eveniet repellat optio rem ipsum ut in temporibus veritatis, quibusdam, dolorem beatae perferendis quis sit, harum cupiditate fugiat laborum officia provident magnam numquam. Animi quod accusamus explicabo, officiis laborum ad omnis natus sint obcaecati. Repellat tempora cum quod quae. Consequatur quis tempore nostrum molestiae, aliquid nulla. Quod molestias pariatur rem assumenda in aut? Accusantium excepturi voluptate quos non earum possimus ea accusamus!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos quia tenetur impedit pariatur similique fugit hic nam dolores libero reiciendis, distinctio cupiditate ipsam voluptate velit, eveniet porro facilis veniam molestias eligendi non? Labore tenetur nulla distinctio hic eveniet repellat optio rem ipsum ut in temporibus veritatis, quibusdam, dolorem beatae perferendis quis sit, harum cupiditate fugiat laborum officia provid Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dicta est repudiandae reiciendis assumenda delectus earum. Rem earum autem natus. Voluptatibus reiciendis delectus nam voluptatum deleniti vel nisi suscipit doloremque.</p>
             <button><a href="#">Join Us Now!</a></button>
         </div>
         <div class="home_com sign_in">
@@ -47,21 +52,21 @@
         <div class="course_all_img">
             <div class="course_images">
                 <img src="./images/ximg_3.jpg.pagespeed.ic 1.png" alt="course One">
-                <h4>4 Lessons/ 12 weeks</h4>
+                <h4>4 Lessons / 12 weeks</h4>
                 <h4>JS Programming Language</h4>
                 <p class="course_des">course descriptions: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, asperiores officiis? Corrupti sunt perspiciatis labore dolores! Porro aperiam molestiae ipsam natus odio repellat illo, quos, soluta, quibusdam laudantium consequatur ad! Id tempore eaque quae fugit ipsa soluta voluptas placeat magni, officiis laborum architecto quis voluptatem nihil illo tempora amet quam.</p>
                 <p>2,193 students</p>
             </div>
             <div class="course_images">
                 <img src="./images/ximg_4.jpg.pagespeed.ic 1.png" alt="course Two">
-                <h4>6 Lessons/ 10 weeks</h4>
+                <h4>6 Lessons / 10 weeks</h4>
                 <h4>logo design</h4>
                 <p class="course_des">course descriptions: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, asperiores officiis? Corrupti sunt perspiciatis labore dolores! Porro aperiam molestiae ipsam natus odio repellat illo, quos, soluta, quibusdam laudantium consequatur ad! Id tempore eaque quae fugit ipsa soluta voluptas placeat magni, officiis laborum architecto quis voluptatem nihil illo tempora amet quam.</p>
                 <p>1,524 students</p>
             </div>
             <div class="course_images">
                 <img src="./images/ximg_5.jpg.pagespeed.ic 1.png" alt="course Three">
-                <h4>10 Lessons/ 16 weeks</h4>
+                <h4>10 Lessons / 16 weeks</h4>
                 <h4>Stydy of Law Physics</h4>
                 <p class="course_des">course descriptions: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, asperiores officiis? Corrupti sunt perspiciatis labore dolores! Porro aperiam molestiae ipsam natus odio repellat illo, quos, soluta, quibusdam laudantium consequatur ad! Id tempore eaque quae fugit ipsa soluta voluptas placeat magni, officiis laborum architecto quis voluptatem nihil illo tempora amet quam.</p>
                 <p>3,232 students</p>
@@ -146,6 +151,16 @@
         <p>Copyright &copy;2022 All rights reserved | This website is made by team GEEK_BYTES</p>
         </div>
     </footer>
+<script>
+    var menu = document.getElementById("menu_js");
 
+    function hideMenu(){
+       menu.style.right = "-9rem";
+    }
+
+    function showMenu(){
+        menu.style.right = "0";
+    }
+</script>
 </body>
 </html>
