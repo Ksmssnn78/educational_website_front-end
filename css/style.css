@@ -1,102 +1,185 @@
-*{
+* {
     font-size: 1rem;
     font-family: 'Nunito', sans-serif;
 }
+
+html {
+    scroll-padding-top: 5.2rem;
+}
+
+
 /* navigation */
-#head-style{
+
+#head-style {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #3A3A3A;
+    position: fixed;
+    top: 0;
+    z-index: 5;
 }
 
-.logo a{
+.logo a {
     text-decoration: none;
 }
-#logo_name{
+
+#logo_name {
     font-family: 'Square Peg', cursive;
-    color:#fff;
+    color: #fff;
     font-size: 3rem;
     padding: 5px;
 }
-.menu{
+
+.menu {
     flex-basis: 60%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.navigation{
+.navigation {
     margin-top: 1.8rem;
     padding: .5rem;
     padding-left: 3rem;
 }
-.navigation a{
+
+.navigation a {
+    position: relative;
     padding: 10px;
     text-decoration: none;
-    color:#fff;
-} 
-.contact{
+    color: #fff;
+    transition: 0.3s ease;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    left: 7px;
+    bottom: 0;
+    background: red;
+    transform: scale(0, 1);
+    transition: 0.3s ease;
+}
+
+.navigation a:hover {
+    color: coral;
+}
+
+.navigation a:hover::after {
+    transform: scale(1, 1);
+}
+
+.contact {
     margin-top: 1.1rem;
     padding: 5px;
 }
-.contact button{
+
+.contact button {
+    border-radius: 50px;
+    color: #fff;
+    border: 0px;
+    border: 2px solid #7971EA;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    transition: ease-out 0.5s;
+}
+
+.contact button:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.contact button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
     border-radius: 50px;
     background-color: #7971EA;
-    border: 0px;
+    transition: 0.5s all ease;
 }
-.contact button a{
-    text-decoration: none;
-    color: #fff;
+
+.contact button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
 }
-#menu_expnd{
+
+#menu_expnd {
     display: none;
 }
-#menu_cancel{
+
+#menu_cancel {
     display: none;
 }
+
+
 /*navigation end*/
 
+
 /* home page */
-#home{
+
+#home {
     color: #fff;
     background-color: #3A3A3A;
-    height: 87vh;
-    
+    height: 100vh;
+    margin-top: 5.1rem;
 }
-.home_com{
+
+.home_com {
     float: left;
     padding: 5rem;
 }
-.intro{
+
+.intro {
     width: 65%;
 }
-.intro h4{
+
+.intro h4 {
     padding: auto;
     margin: .5rem;
     font-size: xx-large;
 }
-.intro p{
+
+.intro p {
     padding: auto;
     margin: .5rem;
     margin-top: 1.5rem;
     text-align: justify;
 }
-.intro button{
+
+.intro button {
     border: 0px;
     background-color: #7971EA;
     margin-top: 0.5rem;
     border-radius: 30px;
-}
-.intro a{
-    padding: auto;
-    margin:.5rem;
-    text-decoration: none;
-    color:#fff;
+    box-shadow: inset 0 0 0 0 red;
+    outline: none;
+    transition: 0.5s;
 }
 
-.sign_in{
-    width:25rem;
+.intro button:hover {
+    box-shadow: inset 140px 0 0 0 red;
+}
+
+.intro a {
+    padding: auto;
+    margin: .5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sign_in {
+    width: 25rem;
     padding: 3rem;
     margin-top: 2.5rem;
     display: flex;
@@ -104,142 +187,188 @@
     background-color: #fff;
     border-radius: 10px;
 }
-.sign_in h4{
+
+.sign_in h4 {
     font-size: xx-large;
     color: black;
 }
-.sign_in input{
-    color:black;
+
+.sign_in input {
+    color: black;
     height: 2rem;
     width: 100%;
     border-radius: 10px;
-    margin:2.5rem 0px ;
+    margin: 2.5rem 0px;
     display: block;
 }
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(139, 138, 138);
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: rgb(139, 138, 138);
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: rgb(139, 138, 138);
-  }
-.sign_in button{
+}
+
+.sign_in button {
     border-radius: 30px;
     width: 8rem;
     border: 0px;
     background-color: #7971EA;
+    box-shadow: inset 0 0 0 0 red;
+    outline: none;
+    transition: 0.5s;
 }
-.sign_in button a{
+
+.sign_in button:hover {
+    box-shadow: inset 0 0 0 24px red;
+}
+
+.sign_in button a {
     text-decoration: none;
     color: #fff;
 }
 
+
 /* home page end */
 
+
 /* course page */
-.course_panal{
+
+.course_panal {
     background-color: #7971EA;
     height: 20rem;
     width: 100%;
-    margin-top:-9.5rem;
+    margin-top: -9.5rem;
 }
-#course_title{
+
+#course_title {
     color: #fff;
     text-align: center;
     font-size: xxx-large;
     margin-top: 5rem;
 }
-.course_all_img{
+
+.course_all_img {
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 6rem;
     margin-top: -6rem;
 }
-.course_images{
+
+.course_images {
     margin: 0px 3rem;
     border: 2px solid #7971EA;
     border-radius: 1.1rem;
 }
-.course_images > img{
-    width:100%;
+
+.course_images>img {
+    width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
-.course_images > h4{
+
+.course_images>h4 {
     margin: .5rem 0px;
 }
-.course_images > p{
+
+.course_images>p {
     margin: .5rem 0px;
 }
-.course_des{
+
+.course_des {
     text-align: justify;
     height: 10rem;
-    overflow: hidden;
+    overflow: scroll;
 }
-.course_images p:last-child{
+
+.course_des::-webkit-scrollbar {
+    width: 0;
+}
+
+.course_images p:last-child {
     border-top: 2px solid #7971EA;
     text-align: center;
 }
-.course_images p,h4{
+
+.course_images p,
+h4 {
     padding: 0px 0.5rem;
 }
+
+
 /* course page end*/
 
+
 /* our program */
-#op_title{
+
+#op_title {
     font-size: xxx-large;
     text-align: center;
     margin: 1rem;
 }
-#op_title_des{
+
+#op_title_des {
     margin: 6rem;
     padding: 2rem;
     text-align: center;
 }
-.op_img-des{
+
+.op_img-des {
     display: flex;
     flex-direction: row;
     margin: 5rem;
     padding: 1rem;
-
 }
-.op_img-des p{
+
+.op_img-des p {
     text-align: justify;
     padding: 1rem;
 }
-.op_img-des h4{
+
+.op_img-des h4 {
     padding: 1rem;
     font-size: x-large;
 }
-.op_img_third{
+
+.op_img_third {
     margin-bottom: 10rem;
 }
 
+
 /* our program end */
 
+
 /* our teacher */
-#ot_title{
+
+#ot_title {
     text-align: center;
     margin: 3rem;
     font-size: xxx-large;
 }
-.ot_title_des{
+
+.ot_title_des {
     margin: 5rem;
     text-align: center;
 }
-.ot_all{
+
+.ot_all {
     display: grid;
     grid-template-columns: auto auto auto;
     margin: 5rem;
     pad: 1rem;
-
 }
-.ot_common{
+
+.ot_common {
     width: auto;
     border: 2px solid rgba(139, 138, 138, 0.5);
     border-radius: 10px;
@@ -247,32 +376,41 @@
     padding: 1rem;
     text-align: center;
 }
-.ot_common img{
-    margin:auto;
+
+.ot_common img {
+    margin: auto;
     margin-top: -5rem;
     margin-bottom: 1.5rem;
 }
-.ot_name{
+
+.ot_name {
     font-size: 1.5rem;
     margin: .5rem;
 }
-.ot_subject{
+
+.ot_subject {
     margin: .4rem;
 }
-.ot_common p:last-child{
+
+.ot_common p:last-child {
     text-align: justify;
     height: 12rem;
     overflow: hidden;
 }
+
+
 /* our teacher end */
 
+
 /* why choose us*/
-#WCU{
+
+#WCU {
     background-color: #7971EA;
     padding: 5rem;
     border-radius: 30px;
 }
-#wcu_title{
+
+#wcu_title {
     margin: 5rem;
     margin-top: 3rem;
     font-size: 3rem;
@@ -280,79 +418,99 @@
     padding: 1rem;
     color: #fff;
 }
-.wcu_elements{
+
+.wcu_elements {
     display: flex;
     flex-direction: row;
 }
-.wcu_elements div{
+
+.wcu_elements div {
     background-color: #fff;
     border-radius: 30px;
     padding: 3rem;
     height: 30rem;
 }
-.wcu_elements div h4{
+
+.wcu_elements div h4 {
     font-size: xx-large;
 }
-.wcu_elements div p{
+
+.wcu_elements div p {
     padding: 1rem;
 }
+
+
 /* why choose us end*/
 
+
 /* massage us*/
-#massage_us{
+
+#massage_us {
     margin: 5rem;
-    margin-top:10rem;
+    margin-top: 10rem;
 }
-#msg_title{
+
+#msg_title {
     font-size: 3rem;
     text-align: center;
     padding: 1rem;
 }
-.msg_title_des{
+
+.msg_title_des {
     text-align: center;
     padding: 1rem;
     width: 40rem;
     margin: auto;
 }
-.msg_all form{
+
+.msg_all form {
     width: 40rem;
     margin: auto;
 }
-.msg_all form input{
+
+.msg_all form input {
     height: 2rem;
     margin: .3rem 0px;
     border: 2px solid #7971EA;
     border-radius: 10px;
     color: #3A3A3A;
 }
-.msg_all form textarea{
+
+.msg_all form textarea {
     border: 2px solid #7971EA;
     border-radius: 10px;
     color: #3A3A3A;
 }
-.msg_all form button{
+
+.msg_all form button {
     background-color: #7971EA;
     border-radius: 30px;
     margin-top: 0.3rem;
 }
+
+
 /*massage us end*/
+
 
 /* footer */
 
-.foot_div{
+.foot_div {
     background-color: #3A3A3A;
     padding: 2rem;
     margin-top: 2rem;
 }
-.foot_div p{
+
+.foot_div p {
     text-align: center;
     margin: auto;
-    color:#7971EA;
+    color: #7971EA;
 }
+
+
 /* footer end*/
 
 @media screen and (max-width:600px) {
-    .menu{
+    .menu {
         flex-direction: column;
         background-color: #3A3A3A;
         margin: 0;
@@ -362,24 +520,24 @@
         width: 9rem;
         transition: 1s;
     }
-    .navigation{
+    .navigation {
         padding: 0;
         display: flex;
         flex-direction: column;
         margin: 0;
     }
-    #menu_cancel{
+    #menu_cancel {
         display: block;
         margin: 5px;
         padding: 3px;
         height: 30px;
         width: 30px;
     }
-    .contact button{
+    .contact button {
         border-radius: 0;
         background-color: tomato;
     }
-    #menu_expnd{
+    #menu_expnd {
         display: block;
         height: 30px;
         width: 30px;
@@ -389,144 +547,134 @@
         margin-right: -40px;
     }
     /*navigation ends*/
-
     /*home page*/
-    #home{
+    #home {
         color: #fff;
         background-color: #3A3A3A;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: auto;
-        
     }
-    .home_com{
+    .home_com {
         padding: 1rem;
     }
-    .intro{
+    .intro {
         width: 100%;
     }
-    .intro h4{
+    .intro h4 {
         font-size: x-large;
     }
-    .sign_in{
+    .sign_in {
         margin: 1rem;
         width: auto;
     }
     /*home page ends*/
     /*course page*/
-    #course_title{
+    #course_title {
         font-size: xx-large;
         margin-top: 6.5rem;
     }
-    .course_all_img{
+    .course_all_img {
         display: flex;
         flex-direction: column;
         margin: 0;
         margin-top: -9.3rem;
     }
-    .course_images{
+    .course_images {
         margin: 1rem;
     }
     /*course end*/
     /* our program */
-    #op_title{
+    #op_title {
         font-size: xx-large;
         text-align: center;
         margin: 1rem;
-        margin-top:6rem;
+        margin-top: 6rem;
     }
-    #op_title_des{
-        margin:0.5rem;
+    #op_title_des {
+        margin: 0.5rem;
         padding: 1rem;
     }
-    .op_img-des img{
+    .op_img-des img {
         margin: auto;
         height: auto;
         width: auto;
     }
-    .op_img-des{
+    .op_img-des {
         margin: 3px;
         display: block;
     }
-    .op_img-des h4{
+    .op_img-des h4 {
         font-size: x-large;
     }
     /* our program end*/
-
     /* Our teacher */
-    #ot_title{
+    #ot_title {
         font-size: xx-large;
         margin: 1rem;
     }
-    .ot_title_des{
+    .ot_title_des {
         margin: 2rem;
         text-align: justify;
     }
-
-    .ot_all{
+    .ot_all {
         display: flex;
         flex-direction: column;
         margin: 1rem;
         margin-right: 2rem;
     }
-    .ot_common{
+    .ot_common {
         width: 100%;
         margin: .5rem;
         margin-bottom: 5rem;
         margin-top: 3rem;
     }
-
     /* our teacher ends*/
     /* our why choose us*/
-    #WCU{
+    #WCU {
         padding: 1rem;
         border: 1px solid rebeccapurple;
-        
     }
-    .wcu_elements{
+    .wcu_elements {
         flex-direction: column-reverse;
     }
-    #wcu_title{
+    #wcu_title {
         margin: 1rem;
         font-size: xx-large;
     }
-    
-    .wcu_elements div{
+    .wcu_elements div {
         padding: 1rem;
         z-index: 5;
         border: 1px solid #3A3A3A;
         margin-top: -130px;
-        
+        z-index: 2;
     }
-    .wcu_elements div h4{
+    .wcu_elements div h4 {
         font-size: x-large;
     }
-    .wcu_elements div p{
+    .wcu_elements div p {
         padding: 0;
     }
-    
     /* why choose us ends*/
     /* massage us */
-    #massage_us{
+    #massage_us {
         margin: 0;
         margin-top: 8rem;
         width: 100%;
         padding: 1rem;
     }
-    #msg_title{
+    #msg_title {
         font-size: xx-large;
         text-align: center;
         padding: 1rem;
     }
-    .msg_title_des{
+    .msg_title_des {
         text-align: justify;
         width: 100%;
     }
-    .msg_all form{
+    .msg_all form {
         width: 100%;
     }
-    
     /* massage us ends*/
 }
-
